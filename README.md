@@ -68,7 +68,7 @@ These assumptions are made to just scope out the problem:
   
   Finally the model is tesed by running ```python main.py``` or the main method in ipynb. 
   <p align="center">
-    <img width="460" height="300" src="out.png">
+    <img src="out.png">
   </p>
 
     
