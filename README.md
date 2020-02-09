@@ -2,7 +2,6 @@
 ## CNN Circle Detection
 Circle detection in noisy images using CNNs
 
-
 ## Execution Instructions
   - Training:
       - Google Colab 
@@ -68,6 +67,8 @@ These assumptions are made to just scope out the problem:
   ![](LearningCurves_model_mse_20k_5e-3_50epochs.png)
   
   Finally the model is tesed by running ```python main.py``` or the main method in ipynb. 
-  Test Results -
-  ![](out.png)
+  <p align="center">
+    <img width="460" height="300" src="out.png">
+  </p>
+
     
