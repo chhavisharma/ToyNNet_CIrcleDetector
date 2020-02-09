@@ -1,6 +1,6 @@
 
 # CNN Circle Detection
-ScaleAI Assignment
+Circle detection in noisy images
 
 
 ## Execution Instructions
