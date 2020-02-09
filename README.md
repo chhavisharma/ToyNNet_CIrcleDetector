@@ -6,6 +6,7 @@ Circle detection in noisy images using CNNs
   - Training:
       - Google Colab 
           -Run the google colab [ipynb notebook](ScaleAI_ChhaviSharma.ipynb) to execute cells in order.
+          - Please view the commented senctions in the notebook for data generation, preprocessing, anf training.
 
   - Testing:
       - Environment:(tested using conda on MacOSX)
