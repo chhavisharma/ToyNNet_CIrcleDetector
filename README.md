@@ -2,7 +2,8 @@
 # CNN Circle Detection
 ScaleAI Assignment
 
-# Execution Instructions
+
+## Execution Instructions
   - Training:
       - Google Colab (preferred)
           -Run the ipynb ipython notebook on google (colab)[] to execute cells in order.
@@ -20,7 +21,7 @@ ScaleAI Assignment
       - Run <python main.py> to test
     
 
-# Implementaiton Details
+## Implementaiton Details
 
 #### Assumptions:
 - *There is only one circle per image:*
@@ -65,7 +66,7 @@ These assumptions are made to just scope out the problem for interview purposes.
   
   Learning Curve - Plot[]
     
-# Observations and Comments
+## Observations and Comments
   - Assumed that initlais filters reduce noise like gaussian filters
   - THen edge detection
   - and then finally regression on selcted features 
