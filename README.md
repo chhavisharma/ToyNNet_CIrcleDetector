@@ -52,7 +52,7 @@ These assumptions are made to just scope out the problem:
     - Predictions are convereted to absolute lengths before evlautation
     
 #### Data:
-  Collected data samples for training(20k) and validation(4k) (80-20)
+  Collected image samples of dims [1,200,200] for training(20k) and validation(4k) (80-20)
 
 #### Training Configuration:
   num_epochs    = 50
