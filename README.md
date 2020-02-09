@@ -9,35 +9,37 @@ ScaleAI Assignment
 
   - Testing:
       - Environment:(tested using conda env on MacOSX)
-         `
+         ```
             python == 3.6
             pytorch == 1.4.0
             Shapely == 1.6.4.post2
             matplotlib == 2.2.2
             numpy == 1.14.3
             scikit_image == 0.13.1
-         `
+         ```
       - Run <python main.py> to test
     
 
 # Implementaiton Details
 
-### Assumptions to limit the scope (for practical purposes and time contraints):
-- There is only one circle per image:
+#### Assumptions:
+- *There is only one circle per image:*
+
   The model architecture can be easily modified to accound for multiple circles. This could be something like a Region Proposal Network to reduce the search space and then further regress and classifiy over the selected candiate object regions, ( like FRCNN).
 
-- Each image has a circle:
+- *Each image has a circle:*
+
   There is no objectness parameter being trained currently that indicates the presence of a circle in the image, since the assumention (in accordance with the provided problem setup) is that each image has a circle and some random noise. 
   
-  These assumptions are made to just scope out the problem for interview purposes.
+These assumptions are made to just scope out the problem for interview purposes.
   
 
-### Approaches Considered
+#### Approaches Considered:
 1. Classicial (pre-deep learning)
-    - Noise reduction using Gaussian Kernels
-    - Edge detection using Derivative Filters
+    - Noise reduction using gaussian kernels
+    - Edge detection using derivative filters
     - Thresholding for feature extaction
-    - erosion, dialtion and estimation of blobs (connected components)
+    - Erosion, dialtion and estimation of blobs (connected components)
     - Radius and center estimation using bounding boxes
  
 2. CNN based detector (implemented)
@@ -49,16 +51,16 @@ ScaleAI Assignment
       ie. predicton = (row/200.0, col/200.0, radius/50.0)
     - Predictions are convereted to absolute lengths before evlautation
     
-### Data Preprocessing and training parameters
+#### Data:
   Collected data samples for training(20k) and validation(4k) (80-20)
 
-### Training Configuration:
+#### Training Configuration:
   num_epochs    = 50
   criterion     = MSE Loss 
   learning_rate = 5e-3
   optimizer     = torch.optim.Adam(model.parameters(), lr=learning_rate)
 
-### Training and Evaluation
+#### Training and Evaluation:
   Validation is computed after eaach epoch and the loss is plotted in the following graph.
   
   Learning Curve - Plot[]
