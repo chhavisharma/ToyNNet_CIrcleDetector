@@ -44,7 +44,7 @@ These assumptions are made to just scope out the problem:
     - Radius and center estimation using bounding boxes
  
 2. CNN based detector (implemented)
-    - Architecture: Cascaded units of stacked Convolution layer, Batchnorm layer, Relu Activation and Pooling, with the final spatial dimension reduction to 1x1, and, channel dimension reduction to 3 (row col, rad). Finally the output of (Batch, Channels, Height, Width) -> (N,3,1,1) is converted to a probabiltiy using the sigmoid layer.
+    - Architecture: Cascaded units of stacked Convolution, Batchnorm, Relu Activation and Pooling, with the final spatial dimension reduction to 1x1, and, channel dimension reduction to 3 (row col, rad). Finally the output of (Batch, Channels, Height, Width) -> (N,3,1,1) is converted to a probabiltiy using the sigmoid layer.
     - No fully connected layer is used and spatial order is maintained.
     - Each prediction, i.e. row, col and radius are regressed on individually.
     - Loss = (Y - Yhat)^2 (MSE) where Y = (row/200.0, col/200.0, rad/50.) and Yhat is the corresponding 3d vector prediction.        
