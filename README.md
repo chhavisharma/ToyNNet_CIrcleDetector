@@ -55,10 +55,12 @@ These assumptions are made to just scope out the problem:
   Collected image samples of dims [1,200,200] for training(20k) and validation(4k) (80-20)
 
 #### Training Configuration:
+  ```
   num_epochs    = 50
   criterion     = MSE Loss 
   learning_rate = 5e-3
   optimizer     = torch.optim.Adam(model.parameters(), lr=learning_rate)
+  ```
 
 #### Training and Evaluation:
   Validation is computed after eaach epoch and the loss is plotted in the following graph.
