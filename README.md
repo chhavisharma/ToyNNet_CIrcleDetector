@@ -1,15 +1,15 @@
 
-# CNN Circle Detection
-Circle detection in noisy images
+## CNN Circle Detection
+Circle detection in noisy images using CNNs
 
 
 ## Execution Instructions
   - Training:
-      - Google Colab (preferred)
-          -Run the ipynb ipython notebook on google (colab)[] to execute cells in order.
+      - Google Colab 
+          -Run the google colab [ipynb notebook](ScaleAI_ChhaviSharma.ipynb) to execute cells in order.
 
   - Testing:
-      - Environment:(tested using conda env on MacOSX)
+      - Environment:(tested using conda on MacOSX)
          ```
             python == 3.6
             pytorch == 1.4.0
@@ -24,6 +24,8 @@ Circle detection in noisy images
 ## Implementaiton Details
 
 #### Assumptions:
+These assumptions are made to just scope out the problem:
+
 - *There is only one circle per image:*
 
   The model architecture can be easily modified to accound for multiple circles. This could be something like a Region Proposal Network to reduce the search space and then further regress and classifiy over the selected candiate object regions, ( like FRCNN).
@@ -31,8 +33,6 @@ Circle detection in noisy images
 - *Each image has a circle:*
 
   There is no objectness parameter being trained currently that indicates the presence of a circle in the image, since the assumention (in accordance with the provided problem setup) is that each image has a circle and some random noise. 
-  
-These assumptions are made to just scope out the problem for interview purposes.
   
 
 #### Approaches Considered:
@@ -64,11 +64,10 @@ These assumptions are made to just scope out the problem for interview purposes.
 #### Training and Evaluation:
   Validation is computed after eaach epoch and the loss is plotted in the following graph.
   
-  Learning Curve - Plot[]
+  Learning Curve -
+  ![](LearningCurves_model_mse_20k_5e-3_50epochs.png)
+  
+  Finally the model is tesed by running ```python main.py``` or the main method in ipynb. 
+  Test Results -
+  ![](out.png)
     
-## Observations and Comments
-  - Assumed that initlais filters reduce noise like gaussian filters
-  - THen edge detection
-  - and then finally regression on selcted features 
-
- 
