@@ -17,7 +17,7 @@ Circle detection in noisy images using CNNs
             numpy == 1.14.3
             scikit_image == 0.13.1
          ```
-      - Run <python main.py> to test
+      - Run ```python main.py``` to test
     
 
 ## Implementaiton Details
